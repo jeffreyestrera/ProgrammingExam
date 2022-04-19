@@ -1,23 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import One from "./Exam/1"
+import Two from "./Exam/2"
+import Three from "./Exam/3"
 
 function App() {
+  var given_array = [2,3,1,5,6,9,2,6,1,8,7];
+  var result = 0;
+	const output = () => {
+		result =
+			Math.max(...given_array.filter((element, index, array) => 
+			array.indexOf(element) !== index
+		  )
+	  )
+  }
+
+  output()
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <One/>
+      <Two/>
+      <Three/>
     </div>
   );
 }
